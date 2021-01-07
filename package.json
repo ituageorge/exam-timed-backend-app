@@ -1,0 +1,29 @@
+{
+  "name": "exam-timed-backend-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ituageorge/exam-timed-backend-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ituageorge/exam-timed-backend-app/issues"
+  },
+  "homepage": "https://github.com/ituageorge/exam-timed-backend-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config.json": "0.0.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.10",
+    "rootpath": "^0.1.2"
+  }
+}
