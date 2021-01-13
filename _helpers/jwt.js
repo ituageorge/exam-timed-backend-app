@@ -1,7 +1,6 @@
 const expressJwt = require('express-jwt');
 const config = require('config.json');
 const userService = require('../users/userService');
-const jwt = require('express-jwt');
 
 module.exports = jwt;
 
@@ -23,6 +22,6 @@ async function isRevoked(req, payload, done) {
    if (!user) {
        return done(null, true);
    }
-
+   
    done();
 }
