@@ -1,5 +1,9 @@
 module.exports = errorHandler;
 
+process.on('unhandledRejection', function(err) {
+    console.log(err);
+});
+
 function errorHandler ( err, req, res, next) {
     if (typeof (err) === 'string') {
         // custom application error

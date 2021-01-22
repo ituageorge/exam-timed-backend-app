@@ -1,3 +1,4 @@
+require('rootpath')();
 const expressJwt = require('express-jwt');
 const config = require('config.json');
 const userService = require('../users/userService');
@@ -7,9 +8,8 @@ require('dotenv').config();
 module.exports = jwt;
 
 function jwt() {
-    // const secret = config.secret;
+    const secret = config.secret;
 
-    // const secret = secret
     return expressJwt({ secret, algorithms: ['HS256'], isRevoked }).unless({
         path: [
             // public routes that don't require authentication
