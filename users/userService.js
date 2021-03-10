@@ -40,6 +40,7 @@ async function create(userParam) {
     }
 
     const user = new User(userParam);
+    
 
     // hash password 
     if (userParam.password) {

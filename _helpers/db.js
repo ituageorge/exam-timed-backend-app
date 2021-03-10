@@ -1,11 +1,19 @@
 require('rootpath')();
 const config = require('config.json');
 const mongoose = require('mongoose');
-const connectionOptions = { useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false };
+const errorHandler = require('./error-handler');
 
-mongoose.connect(process.env.MONGODB_URI || config.connectionString, connectionOptions)
+// const handleError = require('./error-handler');
+const connectionOptions = { useCreateIndex: true, useNewUrlParser: true,
+        useUnifiedTopology: true,
+      useFindAndModify: false };
 
-mongoose.Promise = global.Promise;
+mongoose.connect(
+    process.env.MONGODB_URI || 
+    config.connectionString, connectionOptions)
+    .catch(error => errorHandler(error));
+
+// mongoose.Promise = global.Promise;
 
 
 module.exports = {

@@ -1,5 +1,5 @@
 require('rootpath')();
-const expressJwt = require('express-jwt');
+var expressJwt = require('express-jwt');
 const config = require('config.json');
 const userService = require('../users/userService');
 
