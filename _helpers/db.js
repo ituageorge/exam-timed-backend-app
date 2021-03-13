@@ -13,7 +13,7 @@ mongoose.connect(
     config.connectionString, connectionOptions)
     .catch(error => errorHandler(error));
 
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 
 module.exports = {
